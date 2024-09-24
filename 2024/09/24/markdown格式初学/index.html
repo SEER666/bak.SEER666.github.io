@@ -4,17 +4,21 @@
   <meta charset="utf-8">
   
   
-  <title>SEER&#39;s Study</title>
+  <title>markdown格式初学 | SEER&#39;s Study</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Record SEER&#39;s learning content.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SEER&#39;s Study">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="今天的学习内容今天我学习了如何使用 Hexo 来创建博客，并将其部署到 GitHub Pages 上。以下是一些我学习到的重要内容： 1. Hexo 的基本操作 创建新文章：使用 hexo new &lt;title&gt; 来创建新文章。 生成静态文件：使用 hexo generate 来生成静态文件。 本地预览：使用 hexo server 启动本地服务器进行预览。  2. Markdown">
+<meta property="og:type" content="article">
+<meta property="og:title" content="markdown格式初学">
+<meta property="og:url" content="http://example.com/2024/09/24/markdown%E6%A0%BC%E5%BC%8F%E5%88%9D%E5%AD%A6/index.html">
 <meta property="og:site_name" content="SEER&#39;s Study">
-<meta property="og:description" content="Record SEER&#39;s learning content.">
+<meta property="og:description" content="今天的学习内容今天我学习了如何使用 Hexo 来创建博客，并将其部署到 GitHub Pages 上。以下是一些我学习到的重要内容： 1. Hexo 的基本操作 创建新文章：使用 hexo new &lt;title&gt; 来创建新文章。 生成静态文件：使用 hexo generate 来生成静态文件。 本地预览：使用 hexo server 启动本地服务器进行预览。  2. Markdown">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://hexo.io/logo.svg">
+<meta property="article:published_time" content="2024-09-24T15:03:39.000Z">
+<meta property="article:modified_time" content="2024-09-24T15:39:22.213Z">
 <meta property="article:author" content="ShenyiQi">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hexo.io/logo.svg">
   
     <link rel="alternate" href="/atom.xml" title="SEER's Study" type="application/atom+xml">
   
@@ -73,55 +77,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-2024.9.24" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/09/24/2024.9.24/" class="article-date">
-  <time class="dt-published" datetime="2024-09-24T15:40:29.000Z" itemprop="datePublished">2024-09-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%97%A5%E5%BF%97/">日志</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/09/24/2024.9.24/">2024.9.24.</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="今天的学习内容"><a href="#今天的学习内容" class="headerlink" title="今天的学习内容"></a>今天的学习内容</h1><p>今天我阅读了FIGRET-sigcomm2024-1(TE)V2。由于白天在处理计算机系统导论的实验内容，傍晚事先搭建了博客，目前只阅读了摘要部分。</p>
-<h2 id="1-摘要部分"><a href="#1-摘要部分" class="headerlink" title="1. 摘要部分"></a>1. 摘要部分</h2><p>流量工程 (TE) 对于提升网络性能和可靠性至关重要。TE 中的一个关键挑战是管理突发的流量激增。现有的TE方案要么无法处理流量突发，要么对所有流量突发情况采取统一防御措施，因此难以在常规场景性能和突发场景性能之间取得平衡。为了解决这一问题，我们提出了FIGRET，一种细粒度的增强鲁棒性的流量工程方案。FIGRET 提供了一种新颖的TE方法，根据不同源-目的对的流量特征，定制不同级别的鲁棒性增强。通过利用基于流量突发感知的损失函数和深度学习技术，FIGRET能够高效生成高质量的TE解决方案。我们对现实生产网络（包括广域网和数据中心）的评估显示，FIGRET 显著优于现有的 TE 方案。与谷歌 Jupiter 数据中心网络中当前部署的 TE 方案相比，FIGRET 将最大链路利用率平均减少了 9%-34%，并将解决方案生成速度提升了 35 到 1800 倍。与 DOTE（一种基于深度学习的最先进的 TE 方法）相比，FIGRET 在高流量动态拓扑中大幅降低了由流量突发引发的严重拥塞事件的发生率，减少幅度在 41%-53.9% 之间。</p>
-<h2 id="2-重要概念1——流量工程"><a href="#2-重要概念1——流量工程" class="headerlink" title="2. 重要概念1——流量工程"></a>2. 重要概念1——流量工程</h2><p>流量工程（Traffic Engineering, 简称 TE）是网络管理中的一个重要领域，旨在通过优化网络资源的使用来提高网络性能、可用性和可靠性。其核心目标是有效地管理网络流量，使其以最佳的方式通过网络，从而避免拥塞、减少延迟、最大化链路的利用率，以及确保更高的服务质量 (QoS)。流量工程通常应用在数据中心网络、广域网（WAN）和软件定义网络（SDN）等环境中。<br><strong>流量工程的关键概念：</strong><br>-流量优化：流量工程的主要任务是根据不同的网络流量需求，计算出最佳的路由方案，使得流量在网络中以最有效的方式进行传输。例如，通过选择不同的路径，将流量均衡分布到多条网络链路上，避免某些链路超载。<br>-最大链路利用率（MLU）：MLU 是流量工程中常用的指标，表示网络中最繁忙链路的负载情况。降低 MLU 可以减少网络拥塞和提高整体网络的效率。<br>-流量突发：在实际网络中，流量可能会出现突然激增的现象，这种突发流量可能导致网络拥塞和性能下降。流量工程需要考虑如何应对这些突发事件，增强网络的鲁棒性，确保在突发情况下网络仍能正常工作。<br>-集中式控制：在现代网络（如软件定义网络，SDN）中，流量工程通常通过一个集中式控制器来实现。控制器根据当前的网络状态（如流量矩阵、链路利用情况等），计算出优化的流量路由策略，并将其下发到各个路由器或交换机。<br>-动态适应：由于网络流量具有动态和不可预测性，流量工程不仅需要根据历史数据进行预测，还需要快速响应实际发生的流量变化。这使得实时性和响应速度在 TE 中显得尤为重要。<br><strong>常见的流量工程方法：</strong><br>-最短路径路由：这是最基本的流量路由方式，流量被引导通过从源到目的地的最短路径。然而，这种方法无法解决链路过载的问题。<br>-多路径路由：为避免网络中某条路径拥塞，流量工程会将流量分散到多条路径上，特别是在流量突发或网络故障的情况下。<br>-深度学习&#x2F;机器学习驱动的流量工程：近年来，随着网络流量模式的复杂性增加，基于深度学习的流量工程方案越来越多，利用历史流量数据来预测未来的流量，并生成相应的优化路由配置。</p>
-<p>总之，流量工程的核心目标是平衡网络资源的利用和网络性能之间的关系，确保网络能够在不同负载条件下保持高效和稳定的运行。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/09/24/2024.9.24/" data-id="cm1gmflht00005g9j9ezeb1tg" data-title="2024.9.24." class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-markdown格式初学" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-markdown格式初学" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/09/24/markdown%E6%A0%BC%E5%BC%8F%E5%88%9D%E5%AD%A6/" class="article-date">
   <time class="dt-published" datetime="2024-09-24T15:03:39.000Z" itemprop="datePublished">2024-09-24</time>
@@ -138,8 +94,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/09/24/markdown%E6%A0%BC%E5%BC%8F%E5%88%9D%E5%AD%A6/">markdown格式初学</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      markdown格式初学
     </h1>
   
 
@@ -184,11 +140,23 @@ console.log(&quot;Hello, Hexo!&quot;);
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
+  
+    <a href="/2024/09/24/2024.9.24/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          2024.9.24.
+        
+      </div>
+    </a>
+  
+  
+</nav>
 
   
+</article>
 
 
 </section>
