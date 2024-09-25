@@ -14,8 +14,9 @@
 <meta property="og:description" content="今天的学习内容今天我阅读了FIGRET-sigcomm2024-1(TE)V2。由于白天在处理计算机系统导论的实验内容，傍晚事先搭建了博客，目前只阅读了摘要部分。 1. 摘要部分流量工程 (TE) 对于提升网络性能和可靠性至关重要。TE 中的一个关键挑战是管理突发的流量激增。现有的TE方案要么无法处理流量突发，要么对所有流量突发情况采取统一防御措施，因此难以在常规场景性能和突发场景性能之间取得平衡">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-09-24T15:40:29.000Z">
-<meta property="article:modified_time" content="2024-09-24T15:56:48.850Z">
-<meta property="article:author" content="ShenyiQi">
+<meta property="article:modified_time" content="2024-09-25T03:08:03.481Z">
+<meta property="article:author" content="SEER">
+<meta property="article:tag" content="论文">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="SEER's Study" type="application/atom+xml">
@@ -33,6 +34,8 @@
 
   
   
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
 <meta name="generator" content="Hexo 7.3.0"></head>
 
 <body>
@@ -81,10 +84,6 @@
   <time class="dt-published" datetime="2024-09-24T15:40:29.000Z" itemprop="datePublished">2024-09-24</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%97%A5%E5%BF%97/">日志</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
@@ -109,10 +108,12 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/09/24/2024.9.24/" data-id="cm1gmflht00005g9j9ezeb1tg" data-title="2024.9.24." class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/09/24/2024.9.24/" data-id="cm1hcaxb30004mc9jfko8e4xn" data-title="2024.9.24." class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%BA%E6%96%87/" rel="tag">论文</a></li></ul>
+
     </footer>
   </div>
   
@@ -131,24 +132,128 @@
 </article>
 
 
+
+
+<!-- 评论系统的选项卡结构 -->
+<div class="comments-tabs">
+  <ul class="tabs">
+    <li class="active" data-tab="valine-tab">Valine</li>
+    <li data-tab="gitalk-tab">Gitalk</li>
+  </ul>
+  <div id="valine-tab" class="tab-content active">
+    <!-- Valine 评论系统 -->
+    <div id="vcomments"></div>
+  </div>
+  <div id="gitalk-tab" class="tab-content">
+    <!-- Gitalk 评论系统 -->
+    <div id="gitalk-container"></div>
+  </div>
+</div>
+
+<!-- Valine 评论系统脚本 -->
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: '#vcomments',  // 挂载评论的 HTML 元素
+    appId: 'X7VMJZiKLlND8y3EXDtaqPI5-gzGzoHsz',  // LeanCloud 的 App ID
+    appKey: 'zFn5LKNiWC2vPb3y0RsW1nMK',  // LeanCloud 的 App Key
+    path: window.location.pathname,  // 使用文章的路径作为评论的唯一标识
+    placeholder: '留下你的评论吧...'  // 输入框的占位文本
+  });
+</script>
+
+<!-- Gitalk 评论系统脚本 -->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+    clientID: 'Ov23li72UMYo6fCMHzh4',
+    clientSecret: '09a7fa09f83eccab1ae731987ac5bab9c6ea1e9d',
+    repo: 'SEERGittalkComments', // 存储评论的仓库
+    owner: 'SEER666', // 仓库的主人
+    admin: ['SEER666'], // 仓库的管理员
+    id: location.pathname, // 每个页面的唯一标识，推荐使用 location.pathname
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  });
+
+  // 只有在切换到 Gitalk 选项卡时才初始化
+  document.querySelector('[data-tab="gitalk-tab"]').addEventListener('click', function() {
+    if (!document.querySelector('#gitalk-container').innerHTML) {
+      gitalk.render('gitalk-container');
+    }
+  });
+</script>
+
+<!-- 选项卡切换脚本 -->
+<script>
+  document.querySelectorAll('.tabs li').forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      document.querySelector('.tabs li.active').classList.remove('active');
+      document.querySelector('.tab-content.active').classList.remove('active');
+      this.classList.add('active');
+      document.getElementById(this.getAttribute('data-tab')).classList.add('active');
+    });
+  });
+</script>
+
+<script>
+  document.write("Pathname: " + location.pathname);
+</script>
+
+
+<!-- 选项卡和评论系统的样式 -->
+<style>
+  .tabs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  .tabs li {
+    padding: 10px 20px;
+    background: #f2f2f2;
+    margin-right: 5px;
+    border-radius: 3px;
+  }
+  .tabs li.active {
+    background: #007bff;
+    color: white;
+  }
+  .tab-content {
+    display: none;
+  }
+  .tab-content.active {
+    display: block;
+  }
+</style>
+
 </section>
         
           <aside id="sidebar">
   
     
+
+  
+    
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5%E5%BF%97/">日志</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown%E8%AF%AD%E6%B3%95/" rel="tag">markdown语法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BA%E6%96%87/" rel="tag">论文</a></li></ul>
     </div>
   </div>
 
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/markdown%E8%AF%AD%E6%B3%95/" style="font-size: 10px;">markdown语法</a> <a href="/tags/%E8%AE%BA%E6%96%87/" style="font-size: 10px;">论文</a>
+    </div>
+  </div>
 
-  
-    
   
     
   <div class="widget-wrap">
@@ -187,7 +292,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       
-      &copy; 2024 ShenyiQi<br>
+      &copy; 2024 SEER<br>
       Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
