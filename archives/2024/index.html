@@ -134,6 +134,32 @@
 </section>
         
           <aside id="sidebar">
+
+  <!-- 在侧边栏顶部添加个人信息框 -->
+  <div class="author-info-box">
+    <a href="https://github.com/SEER666" target="_blank">
+      <img src="https://avatars.githubusercontent.com/u/126209991?v=4" alt="GitHub Avatar" class="author-avatar">
+    </a>
+    <div class="author-details">
+      <h3>SEER</h3>
+      <div class="author-stats">
+        <div class="stat-item">
+          <span class="stat-label">文档</span>
+          <span class="stat-number">2</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">标签</span>
+          <span class="stat-number">2</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">分类</span>
+          <span class="stat-number">0</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 渲染现有的 widgets -->
   
     
 
@@ -186,7 +212,63 @@
   </div>
 
   
+
+  <!-- 直接在 sidebar.ejs 文件中嵌入样式 -->
+  <style>
+    /* 个人信息框的样式 */
+    .author-info-box {
+      max-width: 100%;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .author-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .author-details h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #333;
+    }
+
+    /* 美化统计信息 */
+    .author-stats {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 15px;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: #555;
+      display: block;
+    }
+
+    .stat-number {
+      font-size: 22px;
+      font-weight: bold;
+      color: #007bff;
+      margin-top: 5px;
+    }
+  </style>
 </aside>
+
+
+
+
         
       </div>
       <footer id="footer">
