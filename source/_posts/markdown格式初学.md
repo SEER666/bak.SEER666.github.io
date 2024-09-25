@@ -1,7 +1,7 @@
 ---
 title: markdown格式初学
 date: 2024-09-24 23:03:39
-categories: 日志
+tags: markdown语法
 ---
 
 # 今天的学习内容
